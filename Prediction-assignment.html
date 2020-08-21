@@ -501,10 +501,14 @@ randomForestPrediction &lt;- predict(randomForestModel, testingDataSet, type = &
 <div id="conclusion" class="section level3">
 <h3>Conclusion</h3>
 <p>From the result, it show Random Forest accuracy is higher than Decision tree which is 0.9963 &gt; 0.7412. Therefore, we will use random forest to answer the assignment.</p>
-<pre class="r"><code>FinalPrediction &lt;- predict(randomForestModel, testingDataSet, type = &quot;class&quot;)
-summary(FinalPrediction)</code></pre>
-<pre><code>##    A    B    C    D    E 
-## 1395  950  853  807  899</code></pre>
+</div>
+<div id="final-prediction" class="section level3">
+<h3>Final Prediction</h3>
+<pre class="r"><code>FinalPrediction &lt;- predict(randomForestModel, testingData, type = &quot;class&quot;)
+FinalPrediction</code></pre>
+<pre><code>##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+##  B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
+## Levels: A B C D E</code></pre>
 </div>
 
 

@@ -3,8 +3,8 @@ title: "Practical Machine Learning Course Project - Prediction Assignment"
 author: "Mishell Guerra"
 date: "21 august, 2020"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ### Overview
@@ -88,7 +88,10 @@ confusionMatrix(factor(randomForestPrediction), factor(testingDataSet$classe))
 ### Conclusion
 From the result, it show Random Forest accuracy is higher than Decision tree which is 0.9963  > 0.7412. Therefore, we will use random forest to answer the assignment. 
 
+### Final Prediction
 ```{r warning=FALSE, cache=TRUE}
-FinalPrediction <- predict(randomForestModel, testingDataSet, type = "class")
-summary(FinalPrediction)
+FinalPrediction <- predict(randomForestModel, testingData, type = "class")
+FinalPrediction
+
+
 ```
